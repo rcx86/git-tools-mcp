@@ -99,7 +99,8 @@ def main():
     args, unknown = parser.parse_known_args()
     
     if args.http:
-        mcp.run(transport="http", port=args.port)
+        mcp.settings.port = args.port
+        mcp.run(transport="http")
     else:
         mcp.run(transport="stdio")
 
