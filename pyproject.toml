@@ -1,0 +1,15 @@
+[project]
+name = "git-tools-mcp"
+version = "0.1.0"
+description = "MCP server for Git tools"
+dependencies = [
+    "fastmcp",
+]
+requires-python = ">=3.10"
+
+[project.scripts]
+git-tools-mcp = "git_tools_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
